@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
   gem.homepage      = "https://github.com/zendesk/omniauth-zendesk"
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  gem.files         = `git ls-files`.split("\n")
+  gem.files         = ["README.md", "lib/omniauth-zendesk.rb", "lib/omniauth-zendesk/version.rb", "lib/omniauth/strategies/zendesk.rb", "omniauth-zendesk-0.0.1.gem"]
   gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   gem.name          = "omniauth-zendesk"
   gem.require_paths = ["lib"]
