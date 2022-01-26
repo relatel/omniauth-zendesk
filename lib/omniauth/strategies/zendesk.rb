@@ -38,7 +38,8 @@ module OmniAuth
 
       private
       def fetch_zendesk_account
-        env["rack.request.query_hash"].fetch("account") do
+        params = env['rack.request.form_hash'] || env['rack.request.query_hash']
+        params.fetch("account") do
           raise AccountError.new "account key needed in query string"
         end
       end
